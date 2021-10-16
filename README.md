@@ -75,6 +75,8 @@ Let's take a look at the schema:
 
 This endpoint should return an array of objects containing squads data and an array of developers.
 
+You will have to use prisma to generate a model; you will then be able to use prisma client to interact with the database.
+
 #### ✅ Expected output
 
 ```
@@ -150,7 +152,7 @@ skill id (number)
 
 ```
 {
-  "result": [
+  result: [
     {
       id: number,
       name: string,
@@ -174,7 +176,7 @@ developer id (number)
 
 ```
 {
-  "result": {
+  result: {
     id: number,
     name: string,
     squad: {
@@ -192,3 +194,56 @@ developer id (number)
 - Inputs should be documented
 - Outputs (possible responses) should all be documented
 - A description of the route should be present
+
+### 🔶 Provide an endpoint to authenticate users
+
+This feature implies to alter the database and its model in order to store a login and a password for each user.
+
+As for the login route:
+
+#### ▶️ Input
+
+```
+{
+  login: string,
+  password: string
+}
+```
+
+#### ✅ Expected output
+
+```
+{
+  result: {
+    token: string
+  }
+}
+```
+
+### 🔶 Secure all the routes
+
+#### ✅ Expected result
+
+All our routes should now require authentication. A proper response should be returned if the caller is unauthorized.
+
+### 🔶 Update the owner of a repo
+
+This route is a tricky one. We want to change the owner of a repo by picking, within a squad, the developer having the most experience in a list of skills. If no developer stands out from the crowd, then we shall choose by order of precedence the champion or the squad owner.
+
+#### ▶️ Input
+
+```
+{
+  idRepo: number,
+  idSquad: number,
+  skills: number[]
+}
+```
+
+#### ✅ Expected output
+
+```
+{
+  result: boolean
+}
+```
