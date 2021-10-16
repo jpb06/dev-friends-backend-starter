@@ -42,7 +42,7 @@
     "typescript": "^4.3.5"
   },
   "scripts": {
-    "db:mount": "docker-compose -f ./dbase/docker-compose.yml down && docker-compose -f ./dbase/docker-compose.yml up sandbox-postgres",
+    "start:db": "docker-compose -f ./dbase/docker-compose.yml down && docker-compose -f ./dbase/docker-compose.yml up sandbox-postgres",
     "prebuild": "rimraf dist",
     "build": "nest build",
     "format": "prettier --write \"src/**/*.ts\" \"test/**/*.ts\"",
