@@ -18,11 +18,11 @@ You will need the following to work on this workshop:
 
 | Item          | Description                                                                     | Documentation                                      |
 | ------------- | ------------------------------------------------------------------------------- | -------------------------------------------------- |
+| 🤩 Typescript | Types, types everywhere                                                         | https://www.typescriptlang.org/docs/               |
+| 🖊️ eslint     | Linting all the things!                                                         | https://eslint.org/docs/user-guide/getting-started |
 | 😹 nestjs     | Nest is a cool framework to build backends (brace yourself, decorators inbound) | https://docs.nestjs.com/                           |
 | 🛆 prisma      | Prisma will be our ORM to interract with the database                           | https://www.prisma.io/docs/getting-started         |
 | 🃏 jest       | We will use jest to write our tests                                             | https://jestjs.io/fr/docs/getting-started          |
-| 🖊️ eslint     | Linting all the things!                                                         | https://eslint.org/docs/user-guide/getting-started |
-| 🤩 Typescript | Types, types everywhere                                                         | https://www.typescriptlang.org/docs/               |
 
 ## ⚡ How to start
 
