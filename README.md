@@ -1,4 +1,4 @@
-# 🥇 DevFriends backend bootstrapper
+# 🥇 DevFriends backend workshop
 
 Here is a project to do some backend stuffs. Let's have some fun! ✨
 
