@@ -26,25 +26,25 @@ You will need the following to work on this workshop:
 
 ## ⚡ How to start
 
-### 🔶 Firstof, let's start our database using docker:
+### 🔶 Firstof, let's start our database using docker
 
 ```bash
 yarn start:db
 ```
 
-### 🔶 Launching our tests:
+### 🔶 Launching our tests
 
 ```bash
 yarn test:watch
 ```
 
-### 🔶 Launching our backend in dev mode:
+### 🔶 Launching our backend in dev mode
 
 ```bash
 yarn start:dev
 ```
 
-### 🔶 Building our app for production:
+### 🔶 Building our app for production
 
 ```bash
 yarn build
@@ -75,7 +75,7 @@ Let's take a look at the schema:
 
 This endpoint should return an array of objects containing squads data and an array of developers.
 
-#### ✅ Expected output:
+#### ✅ Expected output
 
 ```
 {
@@ -101,13 +101,13 @@ This endpoint should return an array of objects containing squads data and an ar
 
 This endpoint should return an object contains the dev infos as well as his squad, his skills and his ownerships.
 
-#### ▶️ Input:
+#### ▶️ Input
 
 ```
 developer id (number)
 ```
 
-#### ✅ Expected output:
+#### ✅ Expected output
 
 ```
 {
@@ -140,13 +140,13 @@ developer id (number)
 
 ### 🔶 Provide an endpoint to get all the developers matching a skill
 
-#### ▶️ Input:
+#### ▶️ Input
 
 ```
 skill id (number)
 ```
 
-#### ✅ Expected output:
+#### ✅ Expected output
 
 ```
 {
@@ -164,13 +164,13 @@ skill id (number)
 
 ### 🔶 Provide an endpoint to change the squad of a developer
 
-#### ▶️ Input:
+#### ▶️ Input
 
 ```
 developer id (number)
 ```
 
-#### ✅ Expected output:
+#### ✅ Expected output
 
 ```
 {
@@ -187,7 +187,7 @@ developer id (number)
 
 ### 🔶 Add swagger to the stack and fully document each route
 
-#### ✅ Expected result:
+#### ✅ Expected result
 
 - Inputs should be documented
 - Outputs (possible responses) should all be documented
