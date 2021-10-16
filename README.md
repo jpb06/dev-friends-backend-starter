@@ -62,29 +62,14 @@ Let's take a look at the schema:
 
 ### 🔶 Guidelines
 
-#### 🚨 Use only typescript
-
-No javascript allowed!
-
-#### 🚨 Be modular
-
-nestjs is based on the same principles as angular. Remember modules are cool!
-
-#### 🚨 Follow RESTful principles
-
-Define your endpoints in the most logical way from these principles.
-
-#### 🚨 Make sure to validate inputs
-
-Endpoints should return a specific response when input is invalid.
-
-#### 🚨 Standardize responses.
-
-If a resource is not found, return a 400 response, if something goes wrong, return a 500, etc.
-
-#### 🚨 Test your code
-
-Make sure the codebase is properly tested.
+| Guideline                       | Description                                                                                   |
+| ------------------------------- | --------------------------------------------------------------------------------------------- |
+| 💪 Use only typescript          | No javascript allowed!                                                                        |
+| 💪 Be modular                   | nestjs is based on the same principles as angular. Remember modules are cool!                 |
+| 💪 Follow RESTful principles    | Define your endpoints in the most logical way from these principles                           |
+| 💪 Make sure to validate inputs | Endpoints should return a specific response when input is invalid                             |
+| 💪 Standardize responses        | If a resource is not found, return a 400 response, if something goes wrong, return a 500, etc |
+| 💪 Test your code               | Make sure the codebase is properly tested                                                     |
 
 ### 🔶 Provide an endpoint to get all squads with their developers
 
@@ -92,7 +77,7 @@ This endpoint should return an array of objects containing squads data and an ar
 
 #### ✅ Expected output:
 
-```json
+```
 {
   result: [
     {
@@ -124,7 +109,7 @@ developer id (number)
 
 #### ✅ Expected output:
 
-```json
+```
 {
   result: {
     id: number,
@@ -163,7 +148,7 @@ skill id (number)
 
 #### ✅ Expected output:
 
-```json
+```
 {
   "result": [
     {
@@ -187,7 +172,7 @@ developer id (number)
 
 #### ✅ Expected output:
 
-```json
+```
 {
   "result": {
     id: number,
