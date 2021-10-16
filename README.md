@@ -187,6 +187,28 @@ developer id (number)
 }
 ```
 
+### 🔶 Update the owner of a repo
+
+This route is a tricky one. We want to change the owner of a repo by picking, within a squad, the developer having the most experience in a list of skills. If no developer stands out from the crowd, then we shall choose by order of precedence the champion or the squad owner.
+
+#### ▶️ Input
+
+```
+{
+  idRepo: number,
+  idSquad: number,
+  skills: number[]
+}
+```
+
+#### ✅ Expected output
+
+```
+{
+  result: boolean
+}
+```
+
 ### 🔶 Add swagger to the stack and fully document each route
 
 #### ✅ Expected result
@@ -225,25 +247,3 @@ As for the login route:
 #### ✅ Expected result
 
 All our routes should now require authentication. A proper response should be returned if the caller is unauthorized.
-
-### 🔶 Update the owner of a repo
-
-This route is a tricky one. We want to change the owner of a repo by picking, within a squad, the developer having the most experience in a list of skills. If no developer stands out from the crowd, then we shall choose by order of precedence the champion or the squad owner.
-
-#### ▶️ Input
-
-```
-{
-  idRepo: number,
-  idSquad: number,
-  skills: number[]
-}
-```
-
-#### ✅ Expected output
-
-```
-{
-  result: boolean
-}
-```
