@@ -26,9 +26,9 @@ SET default_table_access_method = heap;
 
 CREATE TABLE public."Dev" (
     id integer NOT NULL,
-    "Squad" integer NOT NULL,
     name text NOT NULL,
-    role text NOT NULL
+    role text NOT NULL,
+    "idSquad" integer NOT NULL
 );
 
 
@@ -40,10 +40,10 @@ ALTER TABLE public."Dev" OWNER TO "POSTGRES_USER";
 
 CREATE TABLE public."DevSkill" (
     id integer NOT NULL,
-    "Dev" integer NOT NULL,
-    "Skill" integer NOT NULL,
     "aquiredAt" timestamp(3) without time zone DEFAULT CURRENT_TIMESTAMP NOT NULL,
-    level integer NOT NULL
+    level integer NOT NULL,
+    "idDev" integer NOT NULL,
+    "idSkill" integer NOT NULL
 );
 
 
@@ -111,8 +111,8 @@ ALTER TABLE public."Repo" OWNER TO "POSTGRES_USER";
 
 CREATE TABLE public."RepoOwner" (
     id integer NOT NULL,
-    "Repo" integer NOT NULL,
-    "Dev" integer NOT NULL
+    "idDev" integer NOT NULL,
+    "idRepo" integer NOT NULL
 );
 
 
@@ -294,15 +294,15 @@ ALTER TABLE ONLY public."Squad" ALTER COLUMN id SET DEFAULT nextval('public."Squ
 -- Data for Name: Dev; Type: TABLE DATA; Schema: public; Owner: POSTGRES_USER
 --
 
-COPY public."Dev" (id, "Squad", name, role) FROM stdin;
-1	1	Arthur	Champion
-2	1	Sarah	Member
-3	2	Hamza	Squad owner
-4	2	Hammadi	Member
-5	2	Vincent	Champion
-6	3	Jean	Member
-7	3	Pierrick	Squad owner
-8	3	Kevin	Champion
+COPY public."Dev" (id, name, role, "idSquad") FROM stdin;
+1	Arthur	Champion	1
+2	Sarah	Member	1
+3	Hamza	Squad owner	2
+4	Hammadi	Member	2
+5	Vincent	Champion	2
+6	Jean	Member	3
+7	Pierrick	Squad owner	3
+8	Kevin	Champion	3
 \.
 
 
@@ -310,24 +310,24 @@ COPY public."Dev" (id, "Squad", name, role) FROM stdin;
 -- Data for Name: DevSkill; Type: TABLE DATA; Schema: public; Owner: POSTGRES_USER
 --
 
-COPY public."DevSkill" (id, "Dev", "Skill", "aquiredAt", level) FROM stdin;
-1	1	1	2011-01-31 23:00:00	2
-2	1	4	2010-01-31 23:00:00	3
-3	2	6	2012-01-31 23:00:00	4
-4	2	1	2008-01-31 23:00:00	1
-5	2	4	2007-01-31 23:00:00	3
-6	3	2	2010-01-31 23:00:00	3
-7	3	1	2000-01-31 23:00:00	3
-8	4	7	2005-01-31 23:00:00	2
-9	5	4	2012-01-31 23:00:00	3
-10	5	1	2008-01-31 23:00:00	2
-11	3	3	2009-01-31 23:00:00	4
-12	6	1	2004-01-31 23:00:00	1
-13	7	3	2003-01-31 23:00:00	2
-14	7	1	2011-01-31 23:00:00	3
-15	7	6	2010-01-31 23:00:00	2
-16	8	5	2009-01-31 23:00:00	4
-17	8	7	2005-01-31 23:00:00	3
+COPY public."DevSkill" (id, "aquiredAt", level, "idDev", "idSkill") FROM stdin;
+1	2011-01-31 23:00:00	2	1	1
+2	2010-01-31 23:00:00	3	1	4
+3	2012-01-31 23:00:00	4	2	6
+4	2008-01-31 23:00:00	1	2	1
+5	2007-01-31 23:00:00	3	2	4
+6	2010-01-31 23:00:00	3	3	2
+7	2000-01-31 23:00:00	3	3	1
+8	2005-01-31 23:00:00	2	4	7
+9	2012-01-31 23:00:00	3	5	4
+10	2008-01-31 23:00:00	2	5	1
+11	2009-01-31 23:00:00	4	3	3
+12	2004-01-31 23:00:00	1	6	1
+13	2003-01-31 23:00:00	2	7	3
+14	2011-01-31 23:00:00	3	7	1
+15	2010-01-31 23:00:00	2	7	6
+16	2009-01-31 23:00:00	4	8	5
+17	2005-01-31 23:00:00	3	8	7
 \.
 
 
@@ -346,17 +346,17 @@ COPY public."Repo" (id, name) FROM stdin;
 -- Data for Name: RepoOwner; Type: TABLE DATA; Schema: public; Owner: POSTGRES_USER
 --
 
-COPY public."RepoOwner" (id, "Repo", "Dev") FROM stdin;
+COPY public."RepoOwner" (id, "idDev", "idRepo") FROM stdin;
 1	1	1
-2	1	5
-3	1	7
-4	2	3
-5	2	4
-6	2	6
-7	3	7
+2	5	1
+3	7	1
+4	3	2
+5	4	2
+6	6	2
+7	7	3
 8	3	3
-9	3	8
-10	3	5
+9	8	3
+10	5	3
 \.
 
 
@@ -391,7 +391,8 @@ COPY public."Squad" (id, name) FROM stdin;
 --
 
 COPY public._prisma_migrations (id, checksum, finished_at, migration_name, logs, rolled_back_at, started_at, applied_steps_count) FROM stdin;
-9cc11ab3-8136-4ca5-b105-8c357fe6fef6	9c1686f2941049d7d7186ecb2659565afb21324057cbcf80f8efe689f8dd7d54	2021-10-15 18:15:40.757919+00	20211014190753_init	\N	\N	2021-10-15 18:15:40.710401+00	1
+e4f4b2e0-cc4b-41ff-846d-0f85d2f9ea7e	9c1686f2941049d7d7186ecb2659565afb21324057cbcf80f8efe689f8dd7d54	2021-10-16 11:21:48.753515+00	20211014190753_init	\N	\N	2021-10-16 11:21:48.71028+00	1
+92fda73f-aa91-420a-b041-6fb30bbc5d3f	18d54dc04b79ffb716ea51be31db101a84cdf50fb6c466c3e2029f67bfcb341e	2021-10-16 11:21:48.767244+00	20211016110347_	\N	\N	2021-10-16 11:21:48.75645+00	1
 \.
 
 
@@ -494,43 +495,43 @@ ALTER TABLE ONLY public._prisma_migrations
 
 
 --
--- Name: DevSkill DevSkill_Dev_fkey; Type: FK CONSTRAINT; Schema: public; Owner: POSTGRES_USER
+-- Name: DevSkill DevSkill_idDev_fkey; Type: FK CONSTRAINT; Schema: public; Owner: POSTGRES_USER
 --
 
 ALTER TABLE ONLY public."DevSkill"
-    ADD CONSTRAINT "DevSkill_Dev_fkey" FOREIGN KEY ("Dev") REFERENCES public."Dev"(id) ON UPDATE CASCADE ON DELETE RESTRICT;
+    ADD CONSTRAINT "DevSkill_idDev_fkey" FOREIGN KEY ("idDev") REFERENCES public."Dev"(id) ON UPDATE CASCADE ON DELETE RESTRICT;
 
 
 --
--- Name: DevSkill DevSkill_Skill_fkey; Type: FK CONSTRAINT; Schema: public; Owner: POSTGRES_USER
+-- Name: DevSkill DevSkill_idSkill_fkey; Type: FK CONSTRAINT; Schema: public; Owner: POSTGRES_USER
 --
 
 ALTER TABLE ONLY public."DevSkill"
-    ADD CONSTRAINT "DevSkill_Skill_fkey" FOREIGN KEY ("Skill") REFERENCES public."Skill"(id) ON UPDATE CASCADE ON DELETE RESTRICT;
+    ADD CONSTRAINT "DevSkill_idSkill_fkey" FOREIGN KEY ("idSkill") REFERENCES public."Skill"(id) ON UPDATE CASCADE ON DELETE RESTRICT;
 
 
 --
--- Name: Dev Dev_Squad_fkey; Type: FK CONSTRAINT; Schema: public; Owner: POSTGRES_USER
+-- Name: Dev Dev_idSquad_fkey; Type: FK CONSTRAINT; Schema: public; Owner: POSTGRES_USER
 --
 
 ALTER TABLE ONLY public."Dev"
-    ADD CONSTRAINT "Dev_Squad_fkey" FOREIGN KEY ("Squad") REFERENCES public."Squad"(id) ON UPDATE CASCADE ON DELETE RESTRICT;
+    ADD CONSTRAINT "Dev_idSquad_fkey" FOREIGN KEY ("idSquad") REFERENCES public."Squad"(id) ON UPDATE CASCADE ON DELETE RESTRICT;
 
 
 --
--- Name: RepoOwner RepoOwner_Dev_fkey; Type: FK CONSTRAINT; Schema: public; Owner: POSTGRES_USER
---
-
-ALTER TABLE ONLY public."RepoOwner"
-    ADD CONSTRAINT "RepoOwner_Dev_fkey" FOREIGN KEY ("Dev") REFERENCES public."Dev"(id) ON UPDATE CASCADE ON DELETE RESTRICT;
-
-
---
--- Name: RepoOwner RepoOwner_Repo_fkey; Type: FK CONSTRAINT; Schema: public; Owner: POSTGRES_USER
+-- Name: RepoOwner RepoOwner_idDev_fkey; Type: FK CONSTRAINT; Schema: public; Owner: POSTGRES_USER
 --
 
 ALTER TABLE ONLY public."RepoOwner"
-    ADD CONSTRAINT "RepoOwner_Repo_fkey" FOREIGN KEY ("Repo") REFERENCES public."Repo"(id) ON UPDATE CASCADE ON DELETE RESTRICT;
+    ADD CONSTRAINT "RepoOwner_idDev_fkey" FOREIGN KEY ("idDev") REFERENCES public."Dev"(id) ON UPDATE CASCADE ON DELETE RESTRICT;
+
+
+--
+-- Name: RepoOwner RepoOwner_idRepo_fkey; Type: FK CONSTRAINT; Schema: public; Owner: POSTGRES_USER
+--
+
+ALTER TABLE ONLY public."RepoOwner"
+    ADD CONSTRAINT "RepoOwner_idRepo_fkey" FOREIGN KEY ("idRepo") REFERENCES public."Repo"(id) ON UPDATE CASCADE ON DELETE RESTRICT;
 
 
 --
