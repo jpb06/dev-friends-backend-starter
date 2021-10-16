@@ -105,7 +105,7 @@ You will have to use prisma to generate a model; you will then be able to use pr
 
 ### 🔶 2) Provide an endpoint to get a developer
 
-This endpoint should return an object contains the dev infos as well as his squad, his skills and his ownerships.
+This endpoint should return an object containing the dev infos as well as his squad, his skills and his ownerships.
 
 #### ▶️ Input
 
@@ -148,6 +148,8 @@ developer id (number)
 
 ### 🔶 3) Provide an endpoint to get all the developers matching a skill
 
+By providing the id of a skill, we expect to get the developers who aquired this skill.
+
 #### ▶️ Input
 
 ```
@@ -174,6 +176,8 @@ skill id (number)
 
 ### 🔶 4) Provide an endpoint to change the squad of a developer
 
+This endpoint should change the squad of a developer and return the developer.
+
 #### ▶️ Input
 
 ```
@@ -197,7 +201,7 @@ developer id (number)
 
 <hr>
 
-### 🔶 5) Update the owner of a repo
+### 🔶 5) Provide an endpoint to update the owner of a repo
 
 This route is a tricky one. We want to change the owner of a repo by picking, within a squad, the developer having the most experience in a list of skills. If no developer stands out from the crowd, then we shall choose by order of precedence the champion or the squad owner.
 
@@ -222,6 +226,8 @@ This route is a tricky one. We want to change the owner of a repo by picking, wi
 <hr>
 
 ### 🔶 6) Add swagger to the stack and fully document each route
+
+We want more documentation! Let's setup a swagger on our api to make sure routes can be easily interacted with and understood.
 
 #### ✅ Expected result
 
@@ -259,6 +265,8 @@ As for the login route:
 <hr>
 
 ### 🔶 8) Secure all the routes
+
+Let's secure our api now! All our routes should be restricted to logged users.
 
 #### ✅ Expected result
 
