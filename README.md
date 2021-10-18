@@ -182,6 +182,7 @@ This endpoint should change the squad of a developer and return the developer.
 
 ```
 developer id (number)
+new squad id (number)
 ```
 
 #### ✅ Expected output
@@ -203,7 +204,7 @@ developer id (number)
 
 ### 🔶 5) Provide an endpoint to update the owner of a repo
 
-This route is a tricky one. We want to change the owner of a repo by picking, within a squad, the developer having the most experience in a list of skills. If no developer stands out from the crowd, then we shall choose by order of precedence the champion or the squad owner.
+This route is a tricky one. We want to change the owner of a repo by picking, within a squad, the developer having the most experience in a list of skills. If no developer stands out from the crowd, then we shall choose by order of precedence the champion or the squad owner within the squad.
 
 #### ▶️ Input
 
