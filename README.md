@@ -10,7 +10,7 @@ You will need the following to work on this workshop:
 
 | Item      | Description                                              | Documentation                               |
 | --------- | -------------------------------------------------------- | ------------------------------------------- |
-| ⚙️ nodejs | Duh!                                                     | https://nodejs.org/en/                      |
+| ⚙️ nodejs | Duh!                                                      | https://nodejs.org/en/                      |
 | 🐳 Docker | we will use docker to launch a postgres instance         | https://www.docker.com/get-started          |
 | 🧶 yarn   | We will use yarn as the package manager for this project | https://yarnpkg.com/getting-started/install |
 
