@@ -2,7 +2,7 @@
 
 Here is a project to do some backend stuffs. Let's have some fun! ✨
 
-[![Open in Visual Studio Code](https://open.vscode.dev/badges/open-in-vscode.svg)](https://open.vscode.dev/jpb06/dev-friends-backend-starter)
+[![Open in Visual Studio Code](https://img.shields.io/static/v1?logo=visualstudiocode&label=&message=Open%20in%20Visual%20Studio%20Code&labelColor=2c2c32&color=007acc&logoColor=007acc)](https://open.vscode.dev/jpb06/dev-friends-backend-starter)
 
 ## ⚡ Requirements
 
@@ -10,19 +10,19 @@ You will need the following to work on this workshop:
 
 | Item      | Description                                              | Documentation                               |
 | --------- | -------------------------------------------------------- | ------------------------------------------- |
-| ⚙️ nodejs | Duh!                                                     | https://nodejs.org/en/                      |
-| 🐳 Docker | we will use docker to launch a postgres instance         | https://www.docker.com/get-started          |
-| 🧶 yarn   | We will use yarn as the package manager for this project | https://yarnpkg.com/getting-started/install |
+| ⚙️ nodejs | Duh!                                                     | <https://nodejs.org/en/>                      |
+| 🐳 Docker | we will use docker to launch a postgres instance         | <https://www.docker.com/get-started>          |
+| 🧶 yarn   | We will use yarn as the package manager for this project | <https://yarnpkg.com/getting-started/install> |
 
 ## ⚡ Stack
 
 | Item          | Description                                                                     | Documentation                                      |
 | ------------- | ------------------------------------------------------------------------------- | -------------------------------------------------- |
-| 🤩 Typescript | Types, types everywhere                                                         | https://www.typescriptlang.org/docs/               |
-| 🖊️ eslint     | Linting all the things!                                                         | https://eslint.org/docs/user-guide/getting-started |
-| 😹 nestjs     | Nest is a cool framework to build backends (brace yourself, decorators inbound) | https://docs.nestjs.com/                           |
-| 🛆 prisma      | Prisma will be our ORM to interract with the database                           | https://www.prisma.io/docs/getting-started         |
-| 🃏 jest       | We will use jest to write our tests                                             | https://jestjs.io/fr/docs/getting-started          |
+| 🤩 Typescript | Types, types everywhere                                                         | <https://www.typescriptlang.org/docs/>               |
+| 🖊️ eslint     | Linting all the things!                                                         | <https://eslint.org/docs/user-guide/getting-started> |
+| 😹 nestjs     | Nest is a cool framework to build backends (brace yourself, decorators inbound) | <https://docs.nestjs.com/>                           |
+| 🛆 prisma      | Prisma will be our ORM to interract with the database                           | <https://www.prisma.io/docs/getting-started>         |
+| 🃏 jest       | We will use jest to write our tests                                             | <https://jestjs.io/fr/docs/getting-started>          |
 
 ## ⚡ How to start
 
@@ -58,7 +58,7 @@ Let's take a look at the schema:
 
 ![Diagram](./misc/db-diagram.png)
 
-## ⚡ Give me features to complete now!
+## ⚡ Give me features to complete now
 
 ### 🔶 Guidelines
 
