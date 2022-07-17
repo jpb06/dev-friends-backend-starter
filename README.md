@@ -1,28 +1,24 @@
 # 🥇 DevFriends backend workshop
 
+[![Open in Visual Studio Code](https://img.shields.io/static/v1?logo=visualstudiocode&label=&message=Open%20in%20Visual%20Studio%20Code&labelColor=2c2c32&color=007acc&logoColor=007acc)](https://open.vscode.dev/jpb06/dev-friends-backend-starter)
+
 Here is a project to do some backend stuffs. Let's have some fun! ✨
 
-[![Open in Visual Studio Code](https://img.shields.io/static/v1?logo=visualstudiocode&label=&message=Open%20in%20Visual%20Studio%20Code&labelColor=2c2c32&color=007acc&logoColor=007acc)](https://open.vscode.dev/jpb06/dev-friends-backend-starter)
+<!-- readme-package-icons start -->
+
+<p align="left"><a href="https://www.typescriptlang.org/docs/" target="_blank"><img height="70" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg" /></a>&nbsp;<a href="https://nodejs.org/en/docs/" target="_blank"><img height="70" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" /></a>&nbsp;<a href="https://yarnpkg.com/api/" target="_blank"><img height="70" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/yarn/yarn-original.svg" /></a>&nbsp;<a href="https://docs.docker.com" target="_blank"><img height="70" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg" /></a>&nbsp;<a href="https://eslint.org/docs/latest/" target="_blank"><img height="70" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/eslint/eslint-original.svg" /></a>&nbsp;<a href="https://jestjs.io/docs/getting-started" target="_blank"><img height="70" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jest/jest-plain.svg" /></a>&nbsp;<a href="https://docs.nestjs.com" target="_blank"><img height="70" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nestjs/nestjs-plain.svg" /></a>&nbsp;<a href="https://prettier.io/docs/en/index.html" target="_blank"><img height="70" src="https://raw.githubusercontent.com/jpb06/readme-package-icons/main/icons/prettier.png" /></a>&nbsp;<a href="https://www.prisma.io/docs/" target="_blank"><img height="70" src="https://raw.githubusercontent.com/jpb06/readme-package-icons/main/icons/prisma.svg" /></a>&nbsp;<a href="https://rxjs.dev/guide/overview" target="_blank"><img height="70" src="https://raw.githubusercontent.com/jpb06/readme-package-icons/main/icons/rxjs.png" /></a>&nbsp;<a href="https://github.com/typestack" target="_blank"><img height="70" src="https://raw.githubusercontent.com/jpb06/readme-package-icons/main/icons/type-stack.png" /></a></p>
+
+<!-- readme-package-icons end -->
 
 ## ⚡ Requirements
 
 You will need the following to work on this workshop:
 
-| Item      | Description                                              | Documentation                               |
-| --------- | -------------------------------------------------------- | ------------------------------------------- |
+| Item      | Description                                              | Documentation                                 |
+| --------- | -------------------------------------------------------- | --------------------------------------------- |
 | ⚙️ nodejs | Duh!                                                     | <https://nodejs.org/en/>                      |
 | 🐳 Docker | we will use docker to launch a postgres instance         | <https://www.docker.com/get-started>          |
 | 🧶 yarn   | We will use yarn as the package manager for this project | <https://yarnpkg.com/getting-started/install> |
-
-## ⚡ Stack
-
-| Item          | Description                                                                     | Documentation                                      |
-| ------------- | ------------------------------------------------------------------------------- | -------------------------------------------------- |
-| 🤩 Typescript | Types, types everywhere                                                         | <https://www.typescriptlang.org/docs/>               |
-| 🖊️ eslint     | Linting all the things!                                                         | <https://eslint.org/docs/user-guide/getting-started> |
-| 😹 nestjs     | Nest is a cool framework to build backends (brace yourself, decorators inbound) | <https://docs.nestjs.com/>                           |
-| 🛆 prisma      | Prisma will be our ORM to interract with the database                           | <https://www.prisma.io/docs/getting-started>         |
-| 🃏 jest       | We will use jest to write our tests                                             | <https://jestjs.io/fr/docs/getting-started>          |
 
 ## ⚡ How to start
 
