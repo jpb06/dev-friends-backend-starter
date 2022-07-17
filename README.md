@@ -1,6 +1,7 @@
 # 🥇 DevFriends backend workshop
 
 [![Open in Visual Studio Code](https://img.shields.io/static/v1?logo=visualstudiocode&label=&message=Open%20in%20Visual%20Studio%20Code&labelColor=2c2c32&color=007acc&logoColor=007acc)](https://open.vscode.dev/jpb06/dev-friends-backend-starter)
+![Last commit](https://img.shields.io/github/last-commit/jpb06/dev-friends-backend-starter?logo=git)
 
 Here is a project to do some backend stuffs. Let's have some fun! ✨
 
