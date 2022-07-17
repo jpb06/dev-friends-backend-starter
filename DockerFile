@@ -1,0 +1,3 @@
+FROM postgres:13.1
+
+ADD ./dbase/db-dump.sql /docker-entrypoint-initdb.d
